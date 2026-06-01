@@ -11,7 +11,7 @@ const gamesData = [
         title: "Cyberguard: Defenders of STI WNU",
         developer: "Shadow Squad",
         thumbnail: "assets/Cyberguard.jpg",
-        link: "https://teambeta.github.io/fisherease"
+        link: "https://cyberguardstiwnu.netlify.app/"
     },
     {
         title: "TA KAZZ: Way Finder of Lost Trails",
