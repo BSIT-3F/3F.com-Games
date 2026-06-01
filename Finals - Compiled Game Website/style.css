@@ -1,0 +1,170 @@
+/* --- Base Variables & Reset --- */
+:root {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+    --accent-color: #00d2ff;
+    --border-radius: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Montserrat is now the default font for the entire site */
+    font-family: 'Montserrat', sans-serif; 
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+/* --- Typography Overrides --- */
+/* Poppins is applied specifically to headings and logos */
+h1, h2, h3, .logo {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    max-width: 1400px; 
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* --- Navigation --- */
+.navbar {
+    background-color: var(--card-bg);
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #333;
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700; /* Made slightly bolder for Poppins */
+}
+
+.logo span {
+    color: var(--accent-color);
+}
+
+.subtitle {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* --- Main Grid Section --- */
+.grid-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.badge {
+    background-color: var(--card-bg);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: var(--accent-color);
+    border: 1px solid #333;
+    font-weight: 600;
+}
+
+.game-grid {
+    display: grid;
+    /* Maintaining your requested 30% wider cards */
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+/* --- Game Cards --- */
+.game-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    border: 1px solid #2a2a2a;
+    display: flex;
+    flex-direction: column;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    border-color: var(--accent-color);
+}
+
+/* --- 4:3 Thumbnail Container --- */
+.thumbnail-container {
+    width: 100%;
+    aspect-ratio: 4 / 3; 
+    background-color: #2a2a2a;
+    overflow: hidden; 
+    position: relative;
+}
+
+.thumbnail-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center;
+    display: block;
+    transition: transform 0.4s ease; 
+}
+
+.game-card:hover .thumbnail-container img {
+    transform: scale(1.05); 
+}
+
+/* --- Card Information --- */
+.card-info {
+    padding: 1rem;
+}
+
+.card-info h3 {
+    font-size: 1.1rem; 
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+}
+
+.card-info p {
+    color: var(--text-secondary);
+    font-size: 0.85rem; 
+}
+
+.brand-group {
+    display: flex;
+    align-items: center; /* This vertically centers the logo with the text */
+    gap: 15px; /* Adjust this number to add more or less space between the logo and text */
+}
+
+/* --- Logo Image Sizing --- */
+.header-logo {
+    width: 45px; 
+    height: 45px;
+    object-fit: contain; 
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
