@@ -30,6 +30,12 @@ const gamesData = [
         developer: "Jolly Roger",
         thumbnail: "assets/Pacific Clash.png",
         link: "https://pacific-clash.netlify.app/"
+    },
+    {
+        title: "PROJECT EXODUS",
+        developer: "Victorio, Bingcang",
+        thumbnail: "assets/Project Exodus.png",
+        link: "https://project-exodus-game.netlify.app/"
     }
 ];
 
